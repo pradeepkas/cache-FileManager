@@ -25,9 +25,53 @@ simple and same as other like user default :
 ```swift
 setter
 cacheManager.setObject(image, forKey: key as NSString)
-
+```
+```swift
 getter
 let data = cacheManager.object(forKey: key as NSString)
 
 ```
 
+## File Manager 
+
+Its management same as we do in our local file system
+
+1. first we have to create folder if we want
+2. then in this folder will store data 
+
+
+```swift
+if !FileManager.default.fileExists(atPath: folderpath.absoluteString) { // 1
+        do {
+                try FileManager.default.createDirectory(at: folderpath, withIntermediateDirectories: true) //2 
+        }catch let error {
+                print(error.localizedDescription)
+        }
+}
+```
+
+code snippet : 
+1. we are checking requied path already exist or not 
+2. if not then will create directory like folder 
+
+
+## setter
+
+```swift
+do {
+   try data.write(to: folderPath)
+} catch let error {
+  print("error \(error.localizedDescription)")
+}
+```
+
+## getter 
+
+```swift
+UIImage(contentsOfFile: folderPath.path)
+```
+
+
+### Hope this will help in your local management !!
+
+Happy coding!! 
