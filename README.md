@@ -1,5 +1,7 @@
 # NSCache and FileManager usage or manger
 
+## [NSCache](https://github.com/pradeepkas/cache-FileManager/blob/main/LocalCacheExample/cache/CacheManager.swift)
+
 In this major thing still we are usign objective C comptiable objects like `NSString` in place of `String`
 
 let suppose we have to store images then simply we can create object like this 
@@ -32,7 +34,7 @@ let data = cacheManager.object(forKey: key as NSString)
 
 ```
 
-## File Manager 
+## [File Manager](https://github.com/pradeepkas/cache-FileManager/blob/main/LocalCacheExample/cache/FileManager.swift)
 
 Its management same as we do in our local file system
 
